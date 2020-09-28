@@ -28,7 +28,6 @@ def result():
 
     # remove duplicates by converting clean list into set
     nodups = set(final)
-    print(nodups)
 
     # count unique emails
     num = len(nodups)

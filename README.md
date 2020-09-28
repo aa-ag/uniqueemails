@@ -6,9 +6,9 @@ This app accepts a list of email addresses and returns an integer indicating the
 
 Unique email addresses means they will be delivered to the same account using Gmail account matching. Specifically: Gmail will ignore the placement of "." in the username. And it will ignore any portion of the username after a "+".
 
-## Access this program
+## Access / run this program
 
-You can access this program [here]().
+You can access this program [https://fr-unique-emails.herokuapp.com/](https://fr-unique-emails.herokuapp.com/).
 
 ## Constrains
 
