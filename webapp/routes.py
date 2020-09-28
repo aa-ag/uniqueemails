@@ -8,7 +8,8 @@ def home():
 @app.route('/result', methods=["POST"])
 def result():
     req = request.get_json()
-    as_string = req['input']
-    res = make_response(jsonify(as_string))
+    as_string = req['input'].split()
+    num = len(as_string)
+    res = make_response(jsonify(num))
     return res
     return render_template("home.html")
