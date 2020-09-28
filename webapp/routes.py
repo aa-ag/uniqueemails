@@ -8,18 +8,29 @@ def home():
 
 @app.route('/result', methods=["POST"])
 def result():
+    # transform input from text area into list
     req = request.get_json()
     as_list = req['input'].split()
 
-    clean_list = []
+    # remove dots
+    no_dots = []
 
     for email in as_list:
-        clean = re.sub('\.', "", email)
-        clean_list.append(clean)
+        clean = re.sub("\.", "", email)
+        no_dots.append(clean)
 
-    nodups = set(clean_list)
+    # remove anything between + and @
+    final = []
+
+    for email in no_dots:
+        cleaner = re.sub("\+spam", "", email)
+        final.append(cleaner)
+
+    # remove duplicates by converting clean list into set
+    nodups = set(final)
     print(nodups)
 
+    # count unique emails
     num = len(nodups)
     res = make_response(jsonify(num))
     return res
