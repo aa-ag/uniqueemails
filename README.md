@@ -1,26 +1,28 @@
 # Unique Email Counter
 
-This web service accepts `http` requests and returns responses based on the condition outlined here.
+This web service accepts `http` requests and returns responses based on the condition outlined [here](https://fetch-hiring.s3.amazonaws.com/email.html).
 
-This app accepts a list of email addresses and returns an integer indicating the number of unique email addresses.
+## Prerequisites
 
-Unique email addresses means they will be delivered to the same account using Gmail account matching. Specifically: Gmail will ignore the placement of "." in the username. And it will ignore any portion of the username after a "+".
+- Docker
 
-## Access / run this program
+## Instructions
+To run this program locally on your device, please follow these instructions:
 
-You can access this program [https://fr-unique-emails.herokuapp.com/](https://fr-unique-emails.herokuapp.com/).
+- Run git clone https://github.com/aa-ag/miniremesh.git
+- Run cd uniqueemails
+- Run docker-compose up
+- Open http://127.0.0.1:5000/
+- Enjoy!
 
-## Constrains
+## Test this program
 
-test.email@gmail.com, test.email+spam@gmail.com and testemail@gmail.com will all go to the same address, and thus the result should be 1.
-test.email@gmail.com and test.email@fetchrewards.com are two different email addresses, and thus the result should be 2.
+You can test this program at [https://fr-unique-emails.herokuapp.com/](https://fr-unique-emails.herokuapp.com/).
 
 ### Technologies used
 
 - Python
 - Flask
-- Bootstrap
-- Javascript
 
 ### Contact
 

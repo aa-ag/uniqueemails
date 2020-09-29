@@ -1,0 +1,10 @@
+version: '3'
+services:
+  web-app:
+    build:
+      dockerfile: Dockerfile
+      context: .
+    restart: always
+    image: uniqueemails
+    ports:
+      - "5000:5000"

@@ -1,36 +1,34 @@
 from webapp import app
-from flask import render_template, redirect, url_for, request, jsonify, make_response
+from flask import request, jsonify
 import re
 
 @app.route('/')
 def home():
-    return render_template("home.html")
+    return jsonify(status='ok')
 
-@app.route('/result', methods=["POST"])
+@app.route('/dedup_emails', methods=["POST"])
 def result():
-    # transform input from text area into list
+    # transform input into list
     req = request.get_json()
     as_list = req['input'].split()
 
-    # remove dots
+    # remove dots after @
     no_dots = []
 
     for email in as_list:
-        clean = re.sub("\.", "", email)
+        clean = re.sub("\.((?!com))", "", email)
         no_dots.append(clean)
 
     # remove anything between + and @
     final = []
 
-    for email in no_dots:
-        cleaner = re.sub("\+spam", "", email)
+    for i in no_dots:
+        cleaner = re.sub("(?=\+).*?(?=\@)", "", i)
         final.append(cleaner)
-
-    # remove duplicates by converting clean list into set
+        
+    # remove duplicates by converting final list into set
     nodups = set(final)
 
     # count unique emails
     num = len(nodups)
-    res = make_response(jsonify(num))
-    return res
-    return render_template("home.html")
+    return jsonify(f"Total number of unique, valid email addresses: {num}.")
