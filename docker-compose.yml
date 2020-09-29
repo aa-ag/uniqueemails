@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 services:
   web-app:
     build:
@@ -7,4 +7,4 @@ services:
     restart: always
     image: uniqueemails
     ports:
-      - "5000:5000"
+      - 5000:5000

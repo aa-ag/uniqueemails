@@ -9,20 +9,11 @@ This web service accepts `http` requests and returns responses based on the cond
 ## Instructions
 To run this program locally on your device, please follow these instructions:
 
-- Run git clone https://github.com/aa-ag/miniremesh.git
-- Run cd uniqueemails
-- Run docker-compose up
-- Open http://127.0.0.1:5000/
+- Run `git clone https://github.com/aa-ag/uniqueemails`.
+- Run `cd uniqueemails`
+- Run `docker-compose up`
+- Open `http://127.0.0.1:5000/`
 - Enjoy!
-
-## Test this program
-
-You can test this program at [https://fr-unique-emails.herokuapp.com/](https://fr-unique-emails.herokuapp.com/).
-
-### Technologies used
-
-- Python
-- Flask
 
 ### Contact
 

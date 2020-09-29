@@ -5,4 +5,5 @@ WORKDIR /code
 COPY requirements.txt /code/
 RUN pip install -r requirements.txt
 COPY . /code/
-CMD ["python", "app.py", "127.0.0.1:5000"]
+ENTRYPOINT [ "python" ]
+CMD ["app.py"]
