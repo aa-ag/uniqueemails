@@ -12,8 +12,8 @@ To run this program locally on your device, please follow these instructions:
 - Run `git clone https://github.com/aa-ag/uniqueemails`.
 - Run `cd uniqueemails`
 - Run `docker-compose up`
-- Open `http://127.0.0.1:5000/`
-- Enjoy!
+- Open `http://127.0.0.1:5000/` | You should see a `status: ok`
+- Now you can input different lists via Postman
 
 ### Contact
 

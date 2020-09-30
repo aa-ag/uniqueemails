@@ -17,7 +17,7 @@ def result():
 
     for email in as_list:
         clean = re.sub("\.((?!com))", "", email)
-        no_dots.append(clean)
+        no_dots.append(clean.replace(",", ""))
 
     # remove anything between + and @
     final = []
