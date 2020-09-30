@@ -13,7 +13,7 @@ To run this program locally on your device, please follow these instructions:
 - Run `cd uniqueemails`
 - Run `docker-compose up`
 - Open `http://127.0.0.1:5000/` | You should see a `status: ok`
-- Now you can input different lists via Postman
+- Enjoy! Now you can, for example, input different lists via Postman
 
 ### Contact
 
