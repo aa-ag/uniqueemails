@@ -10,7 +10,7 @@ def home():
 def result():
     # transform input into list
     req = request.get_json()
-    as_list = req['input'].split()
+    as_list = req['csvEmails'].split()
 
     # remove dots after @
     no_dots = []
@@ -31,4 +31,4 @@ def result():
 
     # count unique emails
     num = len(nodups)
-    return jsonify(f"Total number of unique, valid email addresses: {num}.")
+    return jsonify(totalNumberOfUniqueEmails = num)

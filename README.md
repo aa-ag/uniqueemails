@@ -13,7 +13,20 @@ To run this program locally on your device, please follow these instructions:
 - Run `cd uniqueemails`
 - Run `docker-compose up`
 - Open `http://127.0.0.1:5000/` | You should see a `status: ok`
-- Enjoy! Now you can, for example, input different lists via Postman
+- Enjoy! Now you can, for example, input different lists via Postman; here's the format: 
+
+`POST: /dedup_emails
+Content-Type: "application/json"
+
+Payload
+{
+    "csvEmails": "emailemail@gmail.com, email.email@gmail.com, email..email@gmail.com, emailemail+SPAMspamSPAMfetchrewards@gmail.com, email..................email+ljkasdlfknavlkn575775757@gmail.com"
+}
+
+Output
+{
+    "totalNumberOfUniqueEmails: 1
+}`
 
 ### Contact
 
