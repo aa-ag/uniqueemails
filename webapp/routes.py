@@ -12,7 +12,7 @@ def result():
     req = request.get_json()
     as_list = req['csvEmails'].split()
 
-    # remove dots after @
+    # remove dots before @
     no_dots = []
 
     for email in as_list:
