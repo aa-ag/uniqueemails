@@ -15,7 +15,8 @@ To run this program locally on your device, please follow these instructions:
 - Open `http://127.0.0.1:5000/` | You should see a `status: ok`
 - Enjoy! Now you can, for example, input different lists via Postman; here's the format: 
 
-`POST: /dedup_emails
+```
+POST: /dedup_emails
 Content-Type: "application/json"
 
 Payload
@@ -26,7 +27,8 @@ Payload
 Output
 {
     "totalNumberOfUniqueEmails: 1
-}`
+}
+```
 
 ### Contact
 
