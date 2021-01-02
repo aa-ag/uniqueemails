@@ -31,6 +31,8 @@ def result():
     # single regex
     # [!] if top-level domain has two to six letters (thirdlevel.secondlevel.com)
     # ^[\w!#$%&'*+/=?`{\}~^-]+(?:\.[\w!#$%&'*+/=?`{|}~^-]+*@(?:[A-Z0-9-]+\.)+[A-Z]{2,6}$
+    # [!] no leading, trailing or consecutive dots
+    # ^[A-Z0-9_!#$%&'*+/=?`{|}~^-]+(?:\.[A-Z0-9_!#$%&'*+/=?`{|}~^-]+)*@[A-Z0-9-]+(?:\.[A-Z0-9-]+)*$
 
     # remove duplicates by converting final list into set
     nodups = set(final)

@@ -1,10 +1,33 @@
-certifi==2020.6.20
+# certifi==2020.6.20
+# click==7.1.2
+# Flask==1.1.2
+# gunicorn==20.0.4
+# itsdangerous==1.1.0
+# Jinja2==2.11.2
+# MarkupSafe==1.1.1
+# olefile==0.46
+# psycopg2==2.8.2
+# Werkzeug==1.0.1
+
+astroid @ file:///opt/concourse/worker/volumes/live/76ddd801-8c2e-42ae-78fe-7e7640c9eb32/volume/astroid_1592495930711/work
+autopep8 @ file:///tmp/build/80754af9/autopep8_1596578164842/work
+certifi==2020.12.5
 click==7.1.2
 Flask==1.1.2
 gunicorn==20.0.4
+isort @ file:///tmp/build/80754af9/isort_1602603989581/work
 itsdangerous==1.1.0
 Jinja2==2.11.2
+lazy-object-proxy @ file:///opt/concourse/worker/volumes/live/0ac78eb4-a09b-44ae-4f3a-0b00b7034ce6/volume/lazy-object-proxy_1607707349885/work
 MarkupSafe==1.1.1
+mccabe==0.6.1
 olefile==0.46
-psycopg2==2.8.2
+Pillow @ file:///opt/concourse/worker/volumes/live/dda2ed08-74a0-47b1-4b92-3e662849d96e/volume/pillow_1594307366244/work
+psycopg2==2.8.4
+pycodestyle==2.6.0
+pylint @ file:///opt/concourse/worker/volumes/live/7cea4525-4763-4343-4314-b6c7c20dbe1f/volume/pylint_1598624000729/work
+six @ file:///opt/concourse/worker/volumes/live/5839b2d2-7415-4ff0-4c61-c4cddf798f7c/volume/six_1605205320479/work
+toml @ file:///tmp/build/80754af9/toml_1592853716807/work
+typed-ast==1.4.1
 Werkzeug==1.0.1
+wrapt @ file:///opt/concourse/worker/volumes/live/4f9b85ff-0e2b-45ea-5ced-59ae4d0157bf/volume/wrapt_1607712503374/work
