@@ -2,9 +2,11 @@ from webapp import app
 from flask import request, jsonify
 import re
 
+
 @app.route('/')
 def home():
     return jsonify(status='ok')
+
 
 @app.route('/dedup_emails', methods=["POST"])
 def result():
@@ -25,10 +27,14 @@ def result():
     for i in no_dots:
         cleaner = re.sub("(?=\+).*?(?=\@)", "", i)
         final.append(cleaner)
-        
+
+    # single regex
+    # [!] if top-level domain has two to six letters (thirdlevel.secondlevel.com)
+    # ^[\w!#$%&'*+/=?`{\}~^-]+(?:\.[\w!#$%&'*+/=?`{|}~^-]+*@(?:[A-Z0-9-]+\.)+[A-Z]{2,6}$
+
     # remove duplicates by converting final list into set
     nodups = set(final)
 
     # count unique emails
     num = len(nodups)
-    return jsonify(totalNumberOfUniqueEmails = num)
+    return jsonify(totalNumberOfUniqueEmails=num)
